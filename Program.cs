@@ -1,4 +1,5 @@
 using ProyectoStudent.DAO;
+using System.Text.Json;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,6 +11,11 @@ builder.Services.AddScoped<ProfessorDao>();
 builder.Services.AddScoped<ConsultDao>();
 builder.Services.AddScoped<CommentDao>();
 builder.Services.AddScoped<CourseDAO>();
+
+builder.Services.AddControllers().AddJsonOptions(options =>
+{
+    options.JsonSerializerOptions.PropertyNamingPolicy = JsonNamingPolicy.CamelCase;
+});
 
 
 var app = builder.Build();
