@@ -1,5 +1,5 @@
-﻿// Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
+// Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
+// for details on configuring this project to bundle and minify static web assets. josh
 
 $(document).ready(function () {
 
@@ -184,29 +184,29 @@ $(document).ready(function () {
         $('#loginTab').removeClass('active');
     });
 
-    // Evento para el formulario de login con usuario quemado
-    $("#loginForm").submit(function (event) { //PMC
+    // Evento para el formulario de login 
+    $("#loginForm").submit(function (event) {
         event.preventDefault();
 
-        // Usuario "quemado" (hardcoded)
-        //const validUsername = "dsda";
-        //const validPassword = "das";
-
-        // Obtener valores del formulario
-        const username = $("#username").val();
-        const password = $("#password").val();
+        const studentData = {
+            userName: $("#username").val(),
+            password: $("#password").val()
+        };
 
         $.ajax({
-            url: `/student/Login?username=${username}&pwd=${password}`, // Debe coincidir con la ruta del controlador
-            type: "GET", // Ahora es POST en lugar de GET
-            dataType: "json",
+            url: "/Student/Login",  //  Ahora usa POST
+            type: "POST",
+            contentType: "application/json",
+            data: JSON.stringify(studentData), //  Enviar el objeto JSON
             success: function (response) {
                 Swal.fire({
                     icon: "success",
                     title: "Inicio de sesión exitoso",
                     text: "Bienvenido, " + response.name
                 }).then(() => {
+                    localStorage.setItem("loggedUser", JSON.stringify(response)); // 
                     $("#loginModal").fadeOut();
+                    mostrarPerfil(); 
                 });
             },
             error: function (xhr) {
@@ -219,6 +219,27 @@ $(document).ready(function () {
                 Swal.fire({ icon: "error", title: "Error de autenticación", text: errorMessage });
             }
         });
+    });
+
+    function mostrarPerfil() {
+        console.log("Ejecutando mostrarPerfil()"); //  Verifica si la función se ejecuta
+
+        let user = JSON.parse(localStorage.getItem("loggedUser"));
+
+        if (user) {
+            console.log("Datos del usuario:", user); //  Verifica qué datos se están obteniendo
+
+            $("#profile-name").text(user.name + " " + user.lastName);
+            $("#profile-pic").attr("src", user.photo ? "data:image/png;base64," + user.photo : "/images/default-user.png");
+            $(".profile-container").fadeIn(); //  Mostrar perfil con animación
+        } else {
+            console.log("❌ No se encontró usuario en localStorage");
+        }
+    }
+
+
+    $(document).ready(function () {
+        mostrarPerfil(); // Cargar perfil si ya hay sesión activa
     });
 
     // Evento para el formulario de registro
@@ -342,14 +363,23 @@ $(document).ready(function () {
 
 // Función para obtener datos del formulario
 function obtenerDatosFormulario() {
-    return {
+    let studentData = {
         name: $("#name").val(),
         lastName: $("#lastName").val(),
         email: $("#email").val(),
         userName: $("#userName").val(),
-        password: $("#password").val()
+        password: $("#passwordRegister").val(),
+        socialLinks: $("#socialLinks").val(),
+        statusStudent: $("#statusStudent").val() === "true"
     };
+
+    console.log("Valor de #password:", $("#registerForm #password").val());
+
+    console.log(" Datos extraídos del formulario:", studentData); 
+
+    return studentData;
 }
+
 
 // Función para mostrar alertas con SweetAlert2
 function mostrarAlerta(tipo, titulo, mensaje) {
@@ -367,7 +397,16 @@ function limpiarFormulario() {
 
 // Función para registrar estudiante con AJAX
 function registrarEstudiante() {
-    let studentData = obtenerDatosFormulario();
+
+    let studentData = obtenerDatosFormulario(); // Obtiene los datos del formulario
+
+    try {
+        studentData = obtenerDatosFormulario(); // Obtiene los datos del formulario
+        console.log("📩 Datos a enviar al backend:", studentData);
+    } catch (error) {
+        console.error("❌ Error en obtenerDatosFormulario():", error);
+        return; // Detener la ejecución si hay un error
+    }
 
     $.ajax({
         url: "/Student/Create", // Ajusta el endpoint
@@ -380,11 +419,12 @@ function registrarEstudiante() {
             cargarEstudiantes(); // Llama la función si tienes una tabla de estudiantes
         },
         error: function (error) {
-            console.error("Error en el registro:", error);
+            console.error("❌ Error en el registro:", error);
             mostrarAlerta("error", "Error", "No se pudo registrar el estudiante.");
         }
     });
 }
+
 
 
 function loadProfessors() {
