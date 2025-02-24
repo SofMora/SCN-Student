@@ -1,0 +1,463 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>UCR Project</title>
+    <!--
+
+    Known Template
+
+    https://templatemo.com/tm-516-known
+
+    -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="css/templatemo-style.css">
+
+</head>
+
+
+<div class="container">
+    <main role="main" class="pb-3">
+        @RenderBody()
+    </main>
+</div>
+
+
+<body id="top" data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
+
+    <!-- PRE LOADER -->
+    <section class="preloader">
+        <div class="spinner">
+
+            <span class="spinner-rotate"></span>
+
+        </div>
+    </section>
+
+
+    <!-- MENU -->
+    <section class="navbar custom-navbar navbar-fixed-top" role="navigation">
+        <div class="container">
+
+            <div class="navbar-header">
+                <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon icon-bar"></span>
+                    <span class="icon icon-bar"></span>
+                    <span class="icon icon-bar"></span>
+                </button>
+
+                <!-- lOGO TEXT HERE -->
+                <a href="#" class="navbar-brand"></a>
+                <img src="\images\ucr.png" alt="Logo" style="height: 100px; width: auto; margin-right: 10px;">
+
+            </div>
+
+            <!-- MENU LINKS -->
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-nav-first">
+                    <li><a href="#top" class="smoothScroll">Home</a></li>
+                    <li><a href="#register" class="smoothScroll">Register</a></li>
+                    <li><a href="#profile" class="smoothScroll">Profile</a></li>
+                    <li><a href="#news" class="smoothScroll">News</a></li>
+                    <li><a href="#consult" class="smoothScroll">Appointment and Consult</a></li>
+
+                </ul>
+
+
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <!-- PROFILE PICTURE -->
+
+    <div class="profile-container" style="display: none; text-align: center;">
+        <img id="profile-pic" src="/images/default-user.png" alt="Profile Picture" style="width: 100px; height: 100px; border-radius: 50%;">
+        <h2 id="profile-name">Nombre del Usuario</h2>
+        <button onclick="openModal1()">Edit</button>
+    </div>
+
+
+    <!-- Modal -->
+    <div id="edit-modal" class="fixed inset-0 bg-gray-900 bg-opacity-50 flex items-center justify-center hidden">
+        <div class="bg-white p-6 rounded-lg shadow-lg w-80">
+            <h3 class="text-lg font-semibold mb-4">Edit Profile</h3>
+
+            <!-- New Name -->
+            <input id="new-name" type="text" placeholder="Enter new name" class="w-full p-2 border rounded mb-3">
+
+            <!-- New Profile URL -->
+            <input id="profile-url" type="url" placeholder="Enter profile URL" class="w-full p-2 border rounded mb-3">
+
+            <!-- New Username -->
+            <input id="new-username" type="text" placeholder="Enter new username" class="w-full p-2 border rounded mb-3">
+
+            <!-- Description -->
+            <textarea id="new-description" placeholder="Enter description" class="w-full p-2 border rounded mb-3"></textarea>
+
+
+            <div class="flex justify-end space-x-2">
+                <button onclick="closeModal1()" class="submit-btn1">Cancel</button>
+                <button onclick="saveChanges1()" class="submit-btn1">Save</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Función para abrir el modal
+        function openModal1() {
+            document.getElementById('edit-modal').classList.remove('hidden');
+        }
+
+        // Función para cerrar el modal
+        function closeModal1() {
+            document.getElementById('edit-modal').classList.add('hidden');
+        }
+
+        // Función para guardar los cambios
+        function saveChanges1() {
+            var newName = document.getElementById('new-name').value;
+            var newPic = document.getElementById('new-pic').files[0];
+
+            if (newName) {
+                document.getElementById('profile-name').innerText = newName;
+            }
+
+            if (newPic) {
+                document.getElementById('profile-pic').src = URL.createObjectURL(newPic);
+            }
+
+            closeModal();
+        }
+    </script>
+
+
+    <section id="news" class="news-container">
+        <h2 class="news-title">Últimas Noticias</h2>
+        <div class="news-scroll">
+            <!-- Aquí se insertarán las noticias dinámicamente con AJAX -->
+        </div>
+    </section>
+
+    <!-- Modal para los comentarios -->
+    <div id="commentsModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h3>Comentarios</h3>
+            <div id="commentsList"></div>
+            <!-- Campo para agregar comentarios -->
+            <textarea id="newComment" placeholder="Escribe tu comentario aquí..." rows="3"></textarea>
+            </br>
+            <button id="submitComment">Agregar comentario</button>
+        </div>
+    </div>
+
+    
+    <!-- CONSULT -->
+    <!-- CONSULTA PRIVADA -->
+
+
+    <div id="consulta-modal" class="modal1">
+        <div class="modal-content">
+            <span class="close1" onclick="closeModal('consulta-modal')">&times;</span>
+            <h2>Consulta Privada</h2>
+            <p>Aquí puedes agendar una consulta con el profesor.</p>
+
+            <!-- Campo para ingresar el asunto -->
+            <label for="asunto">Asunto:</label>
+            <input type="text" id="asunto" name="asunto" placeholder="Escribe el asunto aquí..." required>
+
+            <!-- Campo para ingresar el mensaje -->
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe tu mensaje aquí..." required></textarea>
+
+            <!-- Botón para enviar -->
+            <button class="btn consult" onclick="enviarConsulta()">Enviar Consulta</button>
+        </div>
+    </div>
+
+    <!-- Modal de Perfil --
+
+    <div id="perfil-modal" class="modal1">
+        <div class="modal-content">
+            <span class="close1" onclick="closeModal('perfil-modal')">&times;</span>
+            <h2>Perfil del Profesor</h2>
+            <p>Información detallada del profesor.</p>
+        </div>
+    </div>
+
+
+    <div class="text-center">
+        <h1 class="display-4">Welcome</h1>
+        <div class="form-container">
+            <h3>Registrar Estudiante</h3>
+            <form id="studentForm">
+                <div class="form-group">
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="lastName">Apellido:</label>
+                    <input type="text" id="lastName" name="lastName" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="userName">Usuario:</label>
+                    <input type="text" id="userName" name="userName" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Contraseña:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="socialLinks">Redes Sociales:</label>
+                    <input type="text" id="socialLinks" name="socialLinks">
+                </div>
+
+                <div class="form-group">
+                    <label for="statusStudent">Estado:</label>
+                    <select id="statusStudent" name="statusStudent">
+                        <option value="true">Activo</option>
+                        <option value="false">Inactivo</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn-submit">Registrar</button>
+            </form>
+        </div>
+    -->
+
+
+
+
+
+
+
+    <div class="mt-5">
+        <h3 class="text-center">Lista de Profesores</h3>
+        <table class="table table-bordered table-hover mt-3">
+            <thead class="table-dark">
+                <tr>
+
+                    <th>Nombre</th>
+                    <th>Email</th>
+                    <th>Description</th>
+                    <th>Accion</th>
+                </tr>
+            </thead>
+            <tbody id="professorsTable">
+                <!-- Datos cargados dinámicamente -->
+
+            </tbody>
+        </table>
+    </div>
+
+
+
+    <div class="container">
+        <h1>Foro de Consultas</h1>
+
+        <!-- Formulario para agregar consulta -->
+        <div class="consultation-form">
+            <h3>Crear Consulta</h3>
+            <form id="consultForm">
+                <label for="description">Descripción de la Consulta:</label>
+                </br>
+                <textarea id="description" required></textarea>
+                <br />
+                <label for="type">Tipo de Consulta:</label>
+                <input type="checkbox" id="public">
+                <span class="checkbox-label">Publica</span>
+
+                <input type="checkbox" id="private">
+                <span class="checkbox-label">Privada</span>
+              
+                <br />
+                <label for="date">Fecha de la Consulta:</label>
+                <input type="datetime-local" id="date" required>
+                <br />
+
+
+                <label for="course">Curso:</label>
+                <select id="course" required>
+                    <option value="">Seleccione un Curso</option>
+                </select>
+                <br />
+
+                
+               
+                <button type="submit">Enviar Consulta</button>
+            </form>
+        </div>
+
+        <!-- Mostrar consultas -->
+        <!-- Mostrar consultas -->
+        <div id="consultations" class="consultations-list">
+            <!-- Las consultas se mostrarán aquí -->
+        </div>
+
+        @* <!-- Formulario para agregar comentarios (será mostrado cuando se seleccione una consulta) --> *@
+        @* <div class="comment-form"> *@
+        @*     <h3>Agregar Comentario</h3> *@
+        @*     <textarea id="commentText" placeholder="Escribe tu comentario..." required></textarea> *@
+        @*     <button id="submitComment">Enviar Comentario</button> *@
+        @* </div> *@
+    </div>
+
+
+
+
+
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" id="closeModal">&times;</span>
+
+            <!-- Logo Container -->
+            <div class="logo-container">
+                <img src="\images\ucr.png" alt="Logo" class="logo">
+            </div>
+
+            <!-- Tabs for Login and Register -->
+            <div class="tab-container">
+                <button class="tab-button active" id="loginTab">Iniciar sesión</button>
+                <button class="tab-button" id="registerTab">Registrarse</button>
+            </div>
+
+            <!-- Login Form (default view) -->
+            <div class="form-container" id="loginFormContainer">
+                <h2>Iniciar sesión</h2>
+                <form id="loginForm">
+                    <input type="text" id="username" placeholder="Usuario" required>
+                    <br />
+                    <input type="password" id="password" placeholder="Contraseña" required>
+                    <br />
+                    <button type="submit" id="loginButton">Iniciar sesión</button>
+                </form>
+            </div>
+
+            <div class="form-container" id="registerFormContainer" style="display: none;">
+                <h2>Registrarse</h2>
+                <form id="registerForm">
+                    <input type="text" id="name" placeholder="Nombre" required maxlength="50">
+                    <br />
+                    <input type="text" id="lastName" placeholder="Apellido" required maxlength="50">
+                    <br />
+                    <input type="email" id="email" placeholder="Correo electrónico" required maxlength="50">
+                    <br />
+                    <input type="text" id="userName" placeholder="Usuario" required maxlength="50">
+                    <br />
+                    <input type="password" id="passwordRegister" placeholder="Contraseña" required maxlength="50">
+                    <br />
+                    <button type="submit" id="registerButton">Registrarse</button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+    <!-- FOOTER -->
+    <footer id="footer">
+    </footer>
+    <script>
+        // Función para abrir el modal
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = 'flex';  // Muestra el modal
+        }
+
+        // Función para cerrar el modal
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = 'none';  // Oculta el modal
+        }
+
+        // Función para guardar cambios en el perfil
+        function saveChanges1() {
+            var newName = document.getElementById('new-name').value;
+            var newPic = document.getElementById('new-pic').files[0];
+            var profileUrl = document.getElementById('profile-url').value;
+            var newUsername = document.getElementById('new-username').value;
+            var description = document.getElementById('new-description').value;
+            var facebookLink = document.getElementById('facebook-link').value;
+            var twitterLink = document.getElementById('twitter-link').value;
+            var linkedinLink = document.getElementById('linkedin-link').value;
+
+            // Actualiza el nombre y la foto de perfil
+            if (newName) {
+                document.getElementById('profile-name').innerText = newName;
+            }
+
+            if (newPic) {
+                document.getElementById('profile-pic').src = URL.createObjectURL(newPic);
+            }
+
+            // Aquí puedes actualizar otros campos según lo necesites
+            console.log('Profile URL:', profileUrl);
+            console.log('Username:', newUsername);
+            console.log('Description:', description);
+            console.log('Facebook:', facebookLink);
+            console.log('Twitter:', twitterLink);
+            console.log('LinkedIn:', linkedinLink);
+
+            closeModal('edit-modal'); // Cierra el modal después de guardar los cambios
+        }
+
+        // Función para enviar la consulta
+        function enviarConsulta() {
+            let asunto = document.getElementById('asunto').value;
+            let mensaje = document.getElementById('mensaje').value;
+
+            if (asunto.trim() === "" || mensaje.trim() === "") {
+                alert("Por favor, completa todos los campos.");
+                return;
+            }
+
+            // Aquí puedes hacer algo con los datos, como enviarlos a un servidor
+            console.log("Asunto:", asunto);
+            console.log("Mensaje:", mensaje);
+
+            alert("Consulta enviada correctamente.");
+
+            // Cerrar modal después de enviar
+            closeModal('consulta-modal');
+        }
+    </script>
+
+    <!-- SCRIPTS -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/smoothscroll.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="js/site.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</body>
+
+</html>
+
