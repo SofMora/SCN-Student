@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "z8EHT9iP4SBMPkpTW0cUnbDFWgtFx92YvF7nkEsbEd4=",
+  "Hash": "wgFFQUDbgl7eInaM2nm4EWWTV7vy0zkdWkOJCKpBzB8=",
   "Source": "ProyectoStudent",
   "BasePath": "_content/ProyectoStudent",
   "Mode": "Default",
@@ -199,8 +199,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "0o87ffltd4",
-      "Integrity": "YD20CKnAjVC+bVhbFwCqWhNKdixFRHrSJt6/KxMBLf0=",
+      "Fingerprint": "pahtetl92l",
+      "Integrity": "LxH9rbUmbuGBqDLFWmSSCnLHeKcrJlFWS2+bWMa+Muc=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\templatemo-style.css"
@@ -577,8 +577,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "9ln6gmey3l",
-      "Integrity": "E7uIt6eeaFLnJZHExMK+zphap1iGVEBKlnYqRoDHdMM=",
+      "Fingerprint": "26twkxynu8",
+      "Integrity": "VgzDPWmU+YqjMabYg7hHdV4MFuIsYutl4huyM6HWGh8=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\site.js"
@@ -2296,51 +2296,6 @@
       ]
     },
     {
-      "Route": "css/templatemo-style.0o87ffltd4.css",
-      "AssetFile": "C:\\Users\\claud\\OneDrive\\Escritorio\\Lenguajes Aplicaciones Comerciales\\SCN-Student\\ProyectoStudent\\wwwroot\\css\\templatemo-style.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "39225"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"YD20CKnAjVC+bVhbFwCqWhNKdixFRHrSJt6/KxMBLf0=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 05:03:54 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "0o87ffltd4"
-        },
-        {
-          "Name": "label",
-          "Value": "css/templatemo-style.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-YD20CKnAjVC+bVhbFwCqWhNKdixFRHrSJt6/KxMBLf0="
-        }
-      ]
-    },
-    {
       "Route": "css/templatemo-style.css",
       "AssetFile": "C:\\Users\\claud\\OneDrive\\Escritorio\\Lenguajes Aplicaciones Comerciales\\SCN-Student\\ProyectoStudent\\wwwroot\\css\\templatemo-style.css",
       "Selectors": [],
@@ -2351,7 +2306,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "39225"
+          "Value": "39305"
         },
         {
           "Name": "Content-Type",
@@ -2359,11 +2314,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"YD20CKnAjVC+bVhbFwCqWhNKdixFRHrSJt6/KxMBLf0=\""
+          "Value": "\"LxH9rbUmbuGBqDLFWmSSCnLHeKcrJlFWS2+bWMa+Muc=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 05:03:54 GMT"
+          "Value": "Mon, 24 Feb 2025 15:23:34 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2373,7 +2328,52 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-YD20CKnAjVC+bVhbFwCqWhNKdixFRHrSJt6/KxMBLf0="
+          "Value": "sha256-LxH9rbUmbuGBqDLFWmSSCnLHeKcrJlFWS2+bWMa+Muc="
+        }
+      ]
+    },
+    {
+      "Route": "css/templatemo-style.pahtetl92l.css",
+      "AssetFile": "C:\\Users\\claud\\OneDrive\\Escritorio\\Lenguajes Aplicaciones Comerciales\\SCN-Student\\ProyectoStudent\\wwwroot\\css\\templatemo-style.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "39305"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"LxH9rbUmbuGBqDLFWmSSCnLHeKcrJlFWS2+bWMa+Muc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 24 Feb 2025 15:23:34 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "pahtetl92l"
+        },
+        {
+          "Name": "label",
+          "Value": "css/templatemo-style.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-LxH9rbUmbuGBqDLFWmSSCnLHeKcrJlFWS2+bWMa+Muc="
         }
       ]
     },
@@ -3772,7 +3772,7 @@
       ]
     },
     {
-      "Route": "js/site.9ln6gmey3l.js",
+      "Route": "js/site.26twkxynu8.js",
       "AssetFile": "C:\\Users\\claud\\OneDrive\\Escritorio\\Lenguajes Aplicaciones Comerciales\\SCN-Student\\ProyectoStudent\\wwwroot\\js\\site.js",
       "Selectors": [],
       "ResponseHeaders": [
@@ -3782,7 +3782,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "22407"
+          "Value": "22390"
         },
         {
           "Name": "Content-Type",
@@ -3790,11 +3790,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"E7uIt6eeaFLnJZHExMK+zphap1iGVEBKlnYqRoDHdMM=\""
+          "Value": "\"VgzDPWmU+YqjMabYg7hHdV4MFuIsYutl4huyM6HWGh8=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 05:28:10 GMT"
+          "Value": "Mon, 24 Feb 2025 15:17:32 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3804,7 +3804,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "9ln6gmey3l"
+          "Value": "26twkxynu8"
         },
         {
           "Name": "label",
@@ -3812,7 +3812,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-E7uIt6eeaFLnJZHExMK+zphap1iGVEBKlnYqRoDHdMM="
+          "Value": "sha256-VgzDPWmU+YqjMabYg7hHdV4MFuIsYutl4huyM6HWGh8="
         }
       ]
     },
@@ -3827,7 +3827,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "22407"
+          "Value": "22390"
         },
         {
           "Name": "Content-Type",
@@ -3835,11 +3835,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"E7uIt6eeaFLnJZHExMK+zphap1iGVEBKlnYqRoDHdMM=\""
+          "Value": "\"VgzDPWmU+YqjMabYg7hHdV4MFuIsYutl4huyM6HWGh8=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 05:28:10 GMT"
+          "Value": "Mon, 24 Feb 2025 15:17:32 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3849,7 +3849,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-E7uIt6eeaFLnJZHExMK+zphap1iGVEBKlnYqRoDHdMM="
+          "Value": "sha256-VgzDPWmU+YqjMabYg7hHdV4MFuIsYutl4huyM6HWGh8="
         }
       ]
     },
