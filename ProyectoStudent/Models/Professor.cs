@@ -11,6 +11,6 @@
         public string? Description { get; set; }
         public byte[]? Photo { get; set; }
         public string? SocialLink { get; set; }
-        public bool? StatusProfessor { get; set; } // true = activo, false = inactivo
+        public bool? StatusProfessor { get; set; } 
     }
 }

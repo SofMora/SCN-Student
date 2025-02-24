@@ -10,13 +10,11 @@ namespace ProyectoStudent.DAO
     {
         private readonly string _connectionString;
 
-        // Constructor to initialize connection string
         public ConsultDao(IConfiguration configuration)
         {
             _connectionString = configuration.GetConnectionString("AppointmentConection");
         }
 
-        // Method to insert a new consultation
         public string InsertConsult(Consult consult)
         {
             string errorMessage = string.Empty;
@@ -27,7 +25,6 @@ namespace ProyectoStudent.DAO
                 {
                     command.CommandType = CommandType.StoredProcedure;
 
-                    // Adding parameters to the command using the Consult entity
                     command.Parameters.AddWithValue("@DescriptionConsult", consult.DescriptionConsult);
                     command.Parameters.AddWithValue("@TypeConsult", consult.TypeConsult);
                     command.Parameters.AddWithValue("@Author", consult.Author);
@@ -35,7 +32,6 @@ namespace ProyectoStudent.DAO
                     command.Parameters.AddWithValue("@StatusConsult", consult.StatusConsult);
                     command.Parameters.AddWithValue("@IdCourse", consult.IdCourse);
 
-                    // Output parameter for error message
                     var outputErrorMessage = new SqlParameter("@ErrorMessage", SqlDbType.NVarChar, 4000)
                     {
                         Direction = ParameterDirection.Output
@@ -58,8 +54,6 @@ namespace ProyectoStudent.DAO
             return errorMessage;
         }
 
-        //// Method to get a consultation by ID
-        // Método para obtener las consultas activas
         public List<Consult> GetActiveConsults()
         {
             List<Consult> consults = new List<Consult>();
@@ -90,7 +84,6 @@ namespace ProyectoStudent.DAO
                                         StatusConsult = Convert.ToBoolean(reader["StatusConsult"])
                                     };
 
-                                    // Verifica si el estado de la consulta es activo
                                     if ((bool)consult.StatusConsult)
                                     {
                                         consults.Add(consult);

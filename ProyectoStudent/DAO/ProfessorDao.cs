@@ -82,7 +82,7 @@ namespace ProyectoStudent.DAO
                 }
             }
 
-            return professor; // Si no se encuentra el profesor, se retorna null.
+            return professor; 
         }
 
 

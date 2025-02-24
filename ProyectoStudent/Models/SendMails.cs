@@ -40,7 +40,6 @@ namespace ProyectoStudent.Models
                 mail.From = new MailAddress("smartparking500@gmail.com");
                 mail.To.Add(mailClient);
                 mail.Subject = subject;
-                mail.Attachments.Add(new Attachment("wwwroot/assets/img/Report.pdf"));
                 mail.Body = message.ToString();
                 SmtpClient smtp = new SmtpClient("smtp.gmail.com");
                 smtp.Port = 587;

@@ -10,7 +10,7 @@ namespace ProyectoStudent.Controllers
 
         public NewsController(IConfiguration configuration)
         {
-            _newsDAO = new NewsDAO(configuration); // Instanciamos el DAO
+            _newsDAO = new NewsDAO(configuration); 
 
         }
 

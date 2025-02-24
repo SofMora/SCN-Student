@@ -14,7 +14,7 @@ namespace ProyectoStudent.Controllers
 
         public StudentController(IConfiguration configuration)
         {
-            _studentDao = new StudentDAO(configuration); // Instanciamos el DAO
+            _studentDao = new StudentDAO(configuration); 
             encryption = new Encryption();
         }
 
@@ -23,7 +23,7 @@ namespace ProyectoStudent.Controllers
             try
             {
                 var students = _studentDao.Get();
-                return Ok(students); // Devolvemos la lista de estudiantes
+                return Ok(students); 
             }
             catch (Exception ex)
             {
@@ -37,12 +37,12 @@ namespace ProyectoStudent.Controllers
             try
             {
                 var student = _studentDao.Get(email);
-                if (student.Id == 0) // Si no se encuentra el estudiante
+                if (student.Id == 0) 
                 {
                     return NotFound("Estudiante no encontrado.");
                 }
 
-                return Ok(student); // Devuelve el estudiante encontrado
+                return Ok(student); 
             }
             catch (Exception ex)
             {
@@ -61,7 +61,6 @@ namespace ProyectoStudent.Controllers
                     return BadRequest("Estudiante no válido.");
                 }
 
-                // 📌 Imprimir los datos recibidos en la consola del servidor
                 Console.WriteLine(" Datos recibidos:");
                 Console.WriteLine($"   Name: {student.Name}");
                 Console.WriteLine($"   LastName: {student.LastName}");
@@ -105,7 +104,7 @@ namespace ProyectoStudent.Controllers
                 var result = _studentDao.Update(student);
                 if (result > 0)
                 {
-                    return Ok(student); // Devuelve el estudiante actualizado
+                    return Ok(student); 
                 }
                 else
                 {

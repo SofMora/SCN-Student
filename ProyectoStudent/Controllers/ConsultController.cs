@@ -30,7 +30,6 @@ namespace ProyectoStudent.Controllers
                 {
                     flag = true;
                 }
-                // Call the DAO method to insert the consultation into the database
                 string result = _consultDao.InsertConsult(consult);
 
                 SendMails mail = new SendMails();
@@ -42,9 +41,7 @@ namespace ProyectoStudent.Controllers
                     {
                         Task<Course> curso= _courseDao.GetCourseByIdAsync(consult.IdCourse);
                      Task<Professor> professor= _professorDao.GetProfessorByIdAsync(curso.Result.IdProfessor);
-                        mail.sendMailsSmartParking("Un estudiante solicito la cita", professor.Result.Email, "Nueva solicitud");
-                     //todo buscar corro profe
-                     //mail.sendMailsSmartParking
+                        mail.sendMailsSmartParking("Se le informa que un estudiante solicitó una cita. Por favor, ingrese al sistema para revisar y gestionar la solicitud.", professor.Result.Email, "Nueva solicitud de cita");
                     }
 
                     // Redirect or return a success message
