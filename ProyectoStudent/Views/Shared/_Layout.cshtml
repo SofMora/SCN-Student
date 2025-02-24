@@ -49,38 +49,18 @@
 
 
     <!-- MENU -->
-    <section class="navbar custom-navbar navbar-fixed-top" role="navigation">
-        <div class="container">
+<section class="navbar custom-navbar navbar-fixed-top">
+    <div>
 
-            <div class="navbar-header">
-                <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon icon-bar"></span>
-                    <span class="icon icon-bar"></span>
-                    <span class="icon icon-bar"></span>
-                </button>
-
-                <!-- lOGO TEXT HERE -->
-                <a href="#" class="navbar-brand"></a>
-                <img src="\images\ucr.png" alt="Logo" style="height: 100px; width: auto; margin-right: 10px;">
-
-            </div>
-
-            <!-- MENU LINKS -->
-            <div class="collapse navbar-collapse">
-                <ul class="nav navbar-nav navbar-nav-first">
-                    <li><a href="#top" class="smoothScroll">Home</a></li>
-                    <li><a href="#register" class="smoothScroll">Register</a></li>
-                    <li><a href="#profile" class="smoothScroll">Profile</a></li>
-                    <li><a href="#news" class="smoothScroll">News</a></li>
-                    <li><a href="#consult" class="smoothScroll">Appointment and Consult</a></li>
-
-                </ul>
-
-
-            </div>
-
+        <div>
+            <button class="navbar-toggle" id="menu-toggle">
+                <span class="icon icon-bar"></span>
+              
+            </button>
         </div>
-    </section>
+
+    </div>
+</section>
 
 
 
@@ -112,8 +92,8 @@
 
 
             <div class="flex justify-end space-x-2">
-                <button onclick="closeModal1()" class="submit-btn1">Cancel</button>
                 <button onclick="saveChanges1()" class="submit-btn1">Save</button>
+                <button onclick="closeModal1()" class="submit-btn1">Cancel</button>
             </div>
         </div>
     </div>
@@ -159,13 +139,17 @@
         <div class="modal-content">
             <span class="close-btn">&times;</span>
             <h3>Comentarios</h3>
-            <div id="commentsList"></div>
+            <div id="commentsList"></div> <!-- Aquí se cargarán los comentarios -->
             <!-- Campo para agregar comentarios -->
             <textarea id="newComment" placeholder="Escribe tu comentario aquí..." rows="3"></textarea>
             </br>
             <button id="submitComment">Agregar comentario</button>
         </div>
     </div>
+
+    <!-- Botón para abrir el modal -->
+    <button class="open-modal-btn">Comentar</button>
+
 
     
     <!-- CONSULT -->
@@ -191,68 +175,7 @@
         </div>
     </div>
 
-    <!-- Modal de Perfil --
-
-    <div id="perfil-modal" class="modal1">
-        <div class="modal-content">
-            <span class="close1" onclick="closeModal('perfil-modal')">&times;</span>
-            <h2>Perfil del Profesor</h2>
-            <p>Información detallada del profesor.</p>
-        </div>
-    </div>
-
-
-    <div class="text-center">
-        <h1 class="display-4">Welcome</h1>
-        <div class="form-container">
-            <h3>Registrar Estudiante</h3>
-            <form id="studentForm">
-                <div class="form-group">
-                    <label for="name">Nombre:</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="lastName">Apellido:</label>
-                    <input type="text" id="lastName" name="lastName" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="userName">Usuario:</label>
-                    <input type="text" id="userName" name="userName" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="password">Contraseña:</label>
-                    <input type="password" id="password" name="password" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="socialLinks">Redes Sociales:</label>
-                    <input type="text" id="socialLinks" name="socialLinks">
-                </div>
-
-                <div class="form-group">
-                    <label for="statusStudent">Estado:</label>
-                    <select id="statusStudent" name="statusStudent">
-                        <option value="true">Activo</option>
-                        <option value="false">Inactivo</option>
-                    </select>
-                </div>
-
-                <button type="submit" class="btn-submit">Registrar</button>
-            </form>
-        </div>
-    -->
-
-
-
-
+ 
 
 
 
@@ -265,7 +188,6 @@
                     <th>Nombre</th>
                     <th>Email</th>
                     <th>Description</th>
-                    <th>Accion</th>
                 </tr>
             </thead>
             <tbody id="professorsTable">
@@ -275,58 +197,77 @@
         </table>
     </div>
 
+    <section class="consultation-forum">
+        <div class="container">
+            <h1>Foro de Consultas</h1>
 
+            <!-- Formulario para agregar consulta -->
+            <div class="consultation-form">
+                <h3>Crear Consulta</h3>
+                <form id="consultForm">
+                    <label for="description">Descripción de la Consulta:</label>
+                    </br>
+                    <textarea id="description" required></textarea>
+                    <br />
+                    <label for="type">Tipo de Consulta:</label>
+                    <input type="checkbox" id="public">
+                    <span class="checkbox-label">Publica</span>
 
-    <div class="container">
-        <h1>Foro de Consultas</h1>
+                    <input type="checkbox" id="private">
+                    <span class="checkbox-label">Privada</span>
 
-        <!-- Formulario para agregar consulta -->
-        <div class="consultation-form">
-            <h3>Crear Consulta</h3>
-            <form id="consultForm">
-                <label for="description">Descripción de la Consulta:</label>
-                </br>
-                <textarea id="description" required></textarea>
-                <br />
-                <label for="type">Tipo de Consulta:</label>
-                <input type="checkbox" id="public">
-                <span class="checkbox-label">Publica</span>
+                    <br />
+                    <label for="date">Fecha de la Consulta:</label>
+                    <input type="datetime-local" id="date" required>
+                    <br />
 
-                <input type="checkbox" id="private">
-                <span class="checkbox-label">Privada</span>
-              
-                <br />
-                <label for="date">Fecha de la Consulta:</label>
-                <input type="datetime-local" id="date" required>
-                <br />
+                    <label for="course">Curso:</label>
+                    <select id="course" required>
+                        <option value="">Seleccione un Curso</option>
+                    </select>
+                    <br />
 
+                    <button type="submit">Enviar Consulta</button>
+                </form>
+            </div>
+            <!-- Mostrar consultas -->
+            <div id="consultations" class="consultations-list">
+                <!-- Consulta 1 -->
+                <div class="consultation-item">
+                    <h4>Consulta 1</h4>
+                    <p>Descripción de la consulta...</p>
 
-                <label for="course">Curso:</label>
-                <select id="course" required>
-                    <option value="">Seleccione un Curso</option>
-                </select>
-                <br />
+                    <!-- Botón para ver los comentarios de la consulta -->
+                    <button class="view-comments btn btn-primary" data-consult-id="1">Ver Comentarios</button>
+                </div>
 
-                
-               
-                <button type="submit">Enviar Consulta</button>
-            </form>
-        </div>
+                <!-- Consulta 2 -->
+                <div class="consultation-item">
+                    <h4>Consulta 2</h4>
+                    <p>Descripción de otra consulta...</p>
 
-        <!-- Mostrar consultas -->
-        <!-- Mostrar consultas -->
-        <div id="consultations" class="consultations-list">
-            <!-- Las consultas se mostrarán aquí -->
-        </div>
+                    <!-- Botón para ver los comentarios de la consulta -->
+                    <button class="view-comments btn btn-primary" data-consult-id="2">Ver Comentarios</button>
+                </div>
+            </div>
 
-        @* <!-- Formulario para agregar comentarios (será mostrado cuando se seleccione una consulta) --> *@
-        @* <div class="comment-form"> *@
-        @*     <h3>Agregar Comentario</h3> *@
-        @*     <textarea id="commentText" placeholder="Escribe tu comentario..." required></textarea> *@
-        @*     <button id="submitComment">Enviar Comentario</button> *@
-        @* </div> *@
-    </div>
+            <!-- Modal para los comentarios -->
+            <div id="commentsModal" class="modal" style="display: none;">
+                <div class="modal-content">
+                    <span class="close-btn">&times;</span>
+                    <h3>Comentarios</h3>
+                    <div id="commentsList">
+                        <!-- Los comentarios de la consulta se cargarán aquí -->
+                    </div>
+                    <!-- Campo para agregar comentarios -->
+                    <textarea id="newComment" placeholder="Escribe tu comentario aquí..." rows="3"></textarea>
+                    </br>
+                    <button id="submitComment">Agregar comentario</button>
+                </div>
+            </div>
 
+            
+    </section>
 
 
 
@@ -335,10 +276,7 @@
         <div class="modal-content">
             <span class="close-btn" id="closeModal">&times;</span>
 
-            <!-- Logo Container -->
-            <div class="logo-container">
-                <img src="\images\ucr.png" alt="Logo" class="logo">
-            </div>
+          
 
             <!-- Tabs for Login and Register -->
             <div class="tab-container">

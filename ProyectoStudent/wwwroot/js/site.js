@@ -2,7 +2,7 @@
 // for details on configuring this project to bundle and minify static web assets. josh
 
 $(document).ready(function () {
-
+    const studentId = 0;
 
     function loadCourses() {
         $.ajax({
@@ -39,14 +39,13 @@ $(document).ready(function () {
                     let consultationsContent = '';
 
                     data.forEach(function (consult) {
+                        // Solo mostramos la descripción y la fecha
                         consultationsContent += `
-                            <div class="consultation-item">
-                                <h3>Descripción: ${consult.descriptionConsult}</h3>
-                                <p><strong>Fecha:</strong> ${new Date(consult.dateconsult).toLocaleDateString()}</p>
-                                <p><strong>Urgente:</strong> ${consult.typeconsult ? 'Sí' : 'No'}</p>
-                                <p><strong>Estado:</strong> ${consult.statusconsult ? 'Activo' : 'Inactivo'}</p>
-                            </div>
-                        `;
+                    <div class="consultation-item" data-consult-id="${consult.id}">
+                        <h3>Descripción: ${consult.descriptionConsult}</h3>
+                        <p><strong>Fecha:</strong> ${new Date(consult.dateconsult).toLocaleDateString()}</p>
+                    </div>
+                    `;
                     });
 
                     $("#consultations").html(consultationsContent); // Insertar las consultas en el contenedor
@@ -63,6 +62,7 @@ $(document).ready(function () {
             }
         });
     }
+
 
 
 
@@ -155,10 +155,6 @@ $(document).ready(function () {
             }
         });
     });
-
-
-
-
 
     // Show login modal on page load
     $('#loginModal').fadeIn();
@@ -358,7 +354,125 @@ $(document).ready(function () {
     }
 });
 
+$(document).ready(function () {
 
+    // Event handler for "Ver comentarios" button (display comments)
+    $(document).on("click", ".view-comments", function () {
+        const consultId = $(this).data("consult-id");
+
+        // Show the modal
+        $("#commentsModal").show();
+
+        // Fetch and display comments
+        fetchComments(consultId);
+    });
+
+    // Function to fetch and display comments
+    function fetchComments(consultId) {
+        $.ajax({
+            url: `/CommentConsult/GetCommentsByConsultId/${consultId}`,  // Reemplaza con la URL adecuada
+            type: "GET",
+            success: function (data) {
+                let commentsContent = "";
+
+                if (data.length === 0) {
+                    commentsContent = "<p>No hay comentarios aún.</p>";
+                } else {
+                    data.forEach(comment => {
+                        commentsContent += `
+                        <div class="comment-item">
+                            <p>${comment.descriptionComment}</p>
+                            <span class="comment-date">${new Date(comment.commentDate).toLocaleDateString()}</span>
+                        </div>
+                    `;
+                    });
+                }
+
+                // Insert the comments into the modal
+                $("#commentsList").html(commentsContent);
+                $("#submitComment").data("consult-id", consultId);  // Store consultId for later use
+            },
+            error: function () {
+                Swal.fire({
+                    icon: "error",
+                    title: "Error",
+                    text: "No se pudieron cargar los comentarios.",
+                });
+            }
+        });
+    }
+
+    // Event handler for adding a new comment
+    $("#submitComment").on("click", function () {
+        const consultId = $(this).data("consult-id");
+        const description = $("#newComment").val().trim();
+
+        if (description === "") {
+            Swal.fire({
+                icon: "warning",
+                title: "Advertencia",
+                text: "El comentario no puede estar vacío.",
+            });
+            return;
+        }
+
+        const newComment = {
+            idConsult: consultId,
+            descriptionComment: description,
+            author: 13  // Cambia el ID de autor según sea necesario
+        };
+
+        // Submit the comment
+        submitComment(consultId, newComment);
+    });
+
+    // Function to submit a new comment
+    function submitComment(consultId, newComment) {
+        $.ajax({
+            url: "/CommentConsult/InsertCommentConsult",  // Reemplaza con la URL adecuada
+            type: "POST",
+            contentType: "application/json",
+            data: JSON.stringify(newComment),
+            success: function () {
+                Swal.fire({
+                    icon: "success",
+                    title: "Éxito",
+                    text: "Comentario agregado correctamente.",
+                });
+
+                // Refresh comments
+                fetchComments(consultId);
+
+                // Clear the input field
+                $("#newComment").val("");
+            },
+            error: function () {
+                Swal.fire({
+                    icon: "error",
+                    title: "Error",
+                    text: "No se pudo agregar el comentario.",
+                });
+            }
+        });
+    }
+
+    // Close modal when the user clicks the close button
+    $(".close-btn").on("click", function () {
+        $("#commentsModal").hide();  // Hide the modal
+    });
+
+    // Close modal when the user clicks outside the modal content
+    $(window).on("click", function (event) {
+        if ($(event.target).is("#commentsModal")) {
+            $("#commentsModal").hide();  // Hide the modal if clicked outside
+        }
+    });
+
+});
+
+
+
+//////////
 
 
 // Función para obtener datos del formulario
@@ -419,7 +533,7 @@ function registrarEstudiante() {
             cargarEstudiantes(); // Llama la función si tienes una tabla de estudiantes
         },
         error: function (error) {
-            console.error("❌ Error en el registro:", error);
+            console.error("Error en el registro:", error);
             mostrarAlerta("error", "Error", "No se pudo registrar el estudiante.");
         }
     });
@@ -428,28 +542,24 @@ function registrarEstudiante() {
 
 
 function loadProfessors() {
-    console.log('hola desde cargar')
+    console.log('Cargando profesores...');
     $.ajax({
-        url: "/Professor/GetAll", 
+        url: "/Professor/GetAll",
         type: "GET",
         success: function (data) {
+            console.log('Datos recibidos:', data); // Verifica qué se está recibiendo
+            $("#professorsTable").empty(); // Vacía la tabla de forma segura
+
             let tableContent = "";
             data.forEach(professor => {
                 tableContent += `
-                        <tr>
-                        
-                            <td>${professor.name}</td>
-                            <td>${professor.email}</td>
-                            <td>${professor.description}</td>
-                            <td>    
-             <button class="btn consult" onclick="openModal('consulta-modal')">Consulta Privada</button>
-                        <button class="btn profile" onclick="openModal('perfil-modal')">Ver Perfil</button>
-                        </tr> 
-                        
-                        </td>
-
-                        `;
+                    <tr>
+                        <td>${professor.name}</td>
+                        <td>${professor.email}</td>
+                        <td>${professor.description}</td>
+                    </tr>`;
             });
+
             $("#professorsTable").html(tableContent);
         },
         error: function () {
@@ -460,6 +570,46 @@ function loadProfessors() {
             });
         }
     });
+}
+function openProfileModal(id) {
+    $.ajax({
+        url: "/Professor/GetById?id=" + id,
+        type: "GET",
+        success: function (professor) {
+            console.log("Profesor recibido:", professor);
+
+            $("#profileName").text(professor.name + " " + professor.lastName);
+            $("#profileEmail").text(professor.email);
+            $("#profileDescription").text(professor.description || "No disponible");
+            $("#profileSocialLink").attr("href", professor.socialLink || "#");
+
+            // Si tiene foto, la mostramos
+            if (professor.photo) {
+                $("#profilePhoto").attr("src", "data:image/png;base64," + arrayBufferToBase64(professor.photo));
+            } else {
+                $("#profilePhoto").attr("src", "default-avatar.png");
+            }
+
+            $("#perfil-modal").modal("show");
+        },
+        error: function () {
+            Swal.fire({
+                icon: "error",
+                title: "Error",
+                text: "No se pudo cargar el perfil del profesor.",
+            });
+        }
+    });
+}
+
+// Convierte arrayBuffer a Base64
+function arrayBufferToBase64(buffer) {
+    let binary = "";
+    let bytes = new Uint8Array(buffer);
+    for (let i = 0; i < bytes.length; i++) {
+        binary += String.fromCharCode(bytes[i]);
+    }
+    return window.btoa(binary);
 }
 
 function loadNewsAndComments() {

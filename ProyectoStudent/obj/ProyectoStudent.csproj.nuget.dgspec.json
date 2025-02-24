@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\claud\\Downloads\\ProyectStudent-Profile\\ProyectStudent\\ProyectStudent\\ProyectoStudent\\ProyectoStudent\\ProyectoStudent.csproj": {}
+    "C:\\Users\\claud\\OneDrive\\Escritorio\\Lenguajes Aplicaciones Comerciales\\SCN-Student\\ProyectoStudent\\ProyectoStudent.csproj": {}
   },
   "projects": {
-    "C:\\Users\\claud\\Downloads\\ProyectStudent-Profile\\ProyectStudent\\ProyectStudent\\ProyectoStudent\\ProyectoStudent\\ProyectoStudent.csproj": {
+    "C:\\Users\\claud\\OneDrive\\Escritorio\\Lenguajes Aplicaciones Comerciales\\SCN-Student\\ProyectoStudent\\ProyectoStudent.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\claud\\Downloads\\ProyectStudent-Profile\\ProyectStudent\\ProyectStudent\\ProyectoStudent\\ProyectoStudent\\ProyectoStudent.csproj",
+        "projectUniqueName": "C:\\Users\\claud\\OneDrive\\Escritorio\\Lenguajes Aplicaciones Comerciales\\SCN-Student\\ProyectoStudent\\ProyectoStudent.csproj",
         "projectName": "ProyectoStudent",
-        "projectPath": "C:\\Users\\claud\\Downloads\\ProyectStudent-Profile\\ProyectStudent\\ProyectStudent\\ProyectoStudent\\ProyectoStudent\\ProyectoStudent.csproj",
+        "projectPath": "C:\\Users\\claud\\OneDrive\\Escritorio\\Lenguajes Aplicaciones Comerciales\\SCN-Student\\ProyectoStudent\\ProyectoStudent.csproj",
         "packagesPath": "C:\\Users\\claud\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\claud\\Downloads\\ProyectStudent-Profile\\ProyectStudent\\ProyectStudent\\ProyectoStudent\\ProyectoStudent\\obj\\",
+        "outputPath": "C:\\Users\\claud\\OneDrive\\Escritorio\\Lenguajes Aplicaciones Comerciales\\SCN-Student\\ProyectoStudent\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

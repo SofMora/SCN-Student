@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ZgLs2coeBvM=",
+  "dgSpecHash": "sYYW9i5EuPw=",
   "success": true,
-  "projectFilePath": "C:\\Users\\claud\\Downloads\\ProyectStudent-Profile\\ProyectStudent\\ProyectStudent\\ProyectoStudent\\ProyectoStudent\\ProyectoStudent.csproj",
+  "projectFilePath": "C:\\Users\\claud\\OneDrive\\Escritorio\\Lenguajes Aplicaciones Comerciales\\SCN-Student\\ProyectoStudent\\ProyectoStudent.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\claud\\.nuget\\packages\\runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "C:\\Users\\claud\\.nuget\\packages\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
