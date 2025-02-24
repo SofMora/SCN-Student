@@ -1,4 +1,4 @@
-﻿using System.Data;
+using System.Data;
 using System.Data.SqlClient;
 using Microsoft.Extensions.FileProviders.Physical;
 using ProyectoStudent.Models;
@@ -20,8 +20,6 @@ namespace ProyectoStudent.DAO
         // Insertar un nuevo estudiante
         public int Insert(Student student)
         {
-            int result = 0;
-
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 try
@@ -37,7 +35,7 @@ namespace ProyectoStudent.DAO
                         command.Parameters.AddWithValue("@Email", student.Email);
                         command.Parameters.AddWithValue("@UserName", student.UserName);
                         command.Parameters.AddWithValue("@Password", student.Password);
-                        command.Parameters.AddWithValue("@Photo", (object)student.Photo ?? DBNull.Value);
+                        command.Parameters.Add("@Photo", SqlDbType.VarBinary, -1).Value = student.Photo ?? (object)DBNull.Value;
                         command.Parameters.AddWithValue("@SocialLinks", (object)student.SocialLinks ?? DBNull.Value);
                         command.Parameters.AddWithValue("@StatusStudent", (object)student.StatusStudent ?? DBNull.Value);
 
@@ -49,24 +47,31 @@ namespace ProyectoStudent.DAO
                         command.Parameters.Add(errorMessageParam);
 
                         // Ejecutar el procedimiento almacenado
-                        result = command.ExecuteNonQuery();
+                        command.ExecuteNonQuery();
 
                         // Validar mensaje de error devuelto por el SP
-                        string errorMessage = errorMessageParam.Value.ToString();
-                        if (!string.IsNullOrEmpty(errorMessage) && errorMessage != "Success")
+                        string errorMessage = errorMessageParam.Value == DBNull.Value ? "Success" : errorMessageParam.Value.ToString();
+                        Console.WriteLine($" Mensaje de salida del SP: {errorMessage}");
+
+                        if (errorMessage == "Success")
+                        { 
+                            return 1; //  Devuelve 1 cuando la inserción es exitosa
+                        }
+                        else
                         {
+                            Console.WriteLine($"❌ Error en SP: {errorMessage}");
                             throw new Exception(errorMessage);
                         }
                     }
                 }
                 catch (SqlException ex)
                 {
-                    Console.WriteLine("SQL Error: " + ex.Message);
+                    Console.WriteLine(" SQL Error: " + ex.Message);
                     throw;
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine("Error: " + ex.Message);
+                    Console.WriteLine(" Error general: " + ex.Message);
                     throw;
                 }
                 finally
@@ -75,9 +80,8 @@ namespace ProyectoStudent.DAO
                         connection.Close();
                 }
             }
-
-            return result;
         }
+
 
         // Eliminar un estudiante por email
         public int Delete(string email)
@@ -206,6 +210,8 @@ namespace ProyectoStudent.DAO
 
         public Student? GetByCredentials(string username, string password)
         {
+            Console.WriteLine($" Buscando usuario: {username}, Contraseña: {password}");
+
             using var connection = new SqlConnection(connectionString);
             connection.Open();
             using var command = new SqlCommand("sp_GetStudentByCredentials", connection)
@@ -216,20 +222,28 @@ namespace ProyectoStudent.DAO
             command.Parameters.AddWithValue("@Password", password);
 
             using var reader = command.ExecuteReader();
-            return reader.Read() ? new Student
+            if (reader.Read())
             {
-                Id = (int)reader["Id"],
-                Name = reader["Name"].ToString(),
-                LastName = reader["LastName"].ToString(),
-                Email = reader["Email"].ToString(),
-                UserName = reader["UserName"].ToString(),
-                Password = reader["Password"].ToString(),
-                Photo = null,
-                SocialLinks = reader["SocialLinks"]?.ToString(),
-                StatusStudent = reader["StatusStudent"] as bool?
-            } : null;
+                Console.WriteLine(" Usuario encontrado en la BD");
+                return new Student
+                {
+                    Id = (int)reader["Id"],
+                    Name = reader["Name"].ToString(),
+                    LastName = reader["LastName"].ToString(),
+                    Email = reader["Email"].ToString(),
+                    UserName = reader["UserName"].ToString(),
+                    Password = reader["Password"].ToString(),
+                    Photo = null,
+                    SocialLinks = reader["SocialLinks"]?.ToString(),
+                    StatusStudent = reader["StatusStudent"] as bool?
+                };
+            }
+            else
+            {
+                Console.WriteLine("❌ Usuario no encontrado o contraseña incorrecta.");
+                return null;
+            }
         }
-
     }
 }
 
