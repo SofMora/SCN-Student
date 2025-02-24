@@ -630,7 +630,7 @@ function loadNewsAndComments() {
                             <div class="news-content">
                                 <h3>${news.title}</h3>
                                 <p>${news.textNews}</p>
-                                <span class="news-date">${new Date(news.dateNews).toLocaleDateString()}</span>
+                                <span class="news-date">${news.dateNews.split(" ")[0]}</span>
                                <br> </br>
                                 <button class="view-comments" data-news-id="${news.id}">Ver comentarios</button>
                             </div>

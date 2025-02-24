@@ -105,7 +105,6 @@
             <!-- Social Links -->
             <input id="new-social-links" type="text" placeholder="Enter social links" class="w-full p-2 border rounded mb-3">
 
-         
             <!-- Description -->
             <textarea id="new-description" placeholder="Enter description" class="w-full p-2 border rounded mb-3"></textarea>
 
@@ -114,19 +113,20 @@
                 <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded">Save Changes</button>
 
                 <button type="button" class="bg-gray-400 text-white px-4 py-2 rounded" onclick="closeModal1()">Cancel</button>
+
+                <button type="button" class="bg-red-500 text-white px-4 py-2 rounded"
+                        onclick="confirmDelete()"
+                        style="transition: background-color 0.3s; background-color: #f56565;"
+                        onmouseover="this.style.backgroundColor='#e53e3e';"
+                        onmouseout="this.style.backgroundColor='#f56565';">
+                    Delete Account
+                </button>
             </div>
         </div>
     </div>
 
-    <script>
-        function closeModal() {
-            document.getElementById('edit-modal').classList.add('hidden');
-        }
-    </script>
-
-
-          
-      
+    <!-- Script Section -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <script>
         // Función para abrir el modal
@@ -153,6 +153,34 @@
             }
 
             closeModal();
+        }
+
+        // Función para mostrar la confirmación antes de eliminar la cuenta
+        function confirmDelete() {
+            Swal.fire({
+                title: 'Are you sure?',
+                text: 'You will not be able to revert this!',
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#d33',
+                cancelButtonColor: '#3085d6',
+                confirmButtonText: 'Yes, delete it!',
+                cancelButtonText: 'Cancel'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    deleteAccount();
+                }
+            });
+        }
+
+        // Función que muestra un mensaje de éxito después de eliminar la cuenta
+        function deleteAccount() {
+            Swal.fire(
+                'Deleted!',
+                'Your account has been deleted.',
+                'success'
+            );
+            // Aquí puedes agregar la lógica para eliminar la cuenta o hacer una llamada AJAX
         }
     </script>
 

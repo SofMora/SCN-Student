@@ -288,6 +288,9 @@ section {
         border-color: transparent;
     }
 
+.custom-hover:hover {
+    background-color: #e11d48; /* Rojo más oscuro */
+}
 
 
 /*---------------------------------------
