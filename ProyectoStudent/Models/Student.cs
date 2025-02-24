@@ -21,9 +21,9 @@ namespace ProyectoStudent.Models
 
         public string UserName { get; set; }
 
-        [JsonPropertyName("password")] // 🔥 Asegura que el JSON lo reconozca bien
+        [JsonPropertyName("password")] 
         public string Password { get; set; }
-        public byte?[] Photo { get; set; } // Para almacenar imágenes
+        public byte?[] Photo { get; set; } 
 
         [JsonPropertyName("SocialLinks")]
 
@@ -31,6 +31,6 @@ namespace ProyectoStudent.Models
 
         [JsonPropertyName("statusStudent")]
 
-        public bool? StatusStudent { get; set; } // true = activo, false = inactivo
+        public bool? StatusStudent { get; set; }
     }
 }

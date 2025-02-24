@@ -46,20 +46,18 @@ namespace ProyectoStudent.DAO
                         };
                         command.Parameters.Add(errorMessageParam);
 
-                        // Ejecutar el procedimiento almacenado
                         command.ExecuteNonQuery();
 
-                        // Validar mensaje de error devuelto por el SP
                         string errorMessage = errorMessageParam.Value == DBNull.Value ? "Success" : errorMessageParam.Value.ToString();
                         Console.WriteLine($" Mensaje de salida del SP: {errorMessage}");
 
                         if (errorMessage == "Success")
                         { 
-                            return 1; //  Devuelve 1 cuando la inserción es exitosa
+                            return 1; 
                         }
                         else
                         {
-                            Console.WriteLine($"❌ Error en SP: {errorMessage}");
+                            Console.WriteLine($"Error en SP: {errorMessage}");
                             throw new Exception(errorMessage);
                         }
                     }
@@ -176,7 +174,6 @@ namespace ProyectoStudent.DAO
             return student;
         }
 
-        // Obtener todos los estudiantes
         public List<Student> Get()
         {
             List<Student> students = new List<Student>();
@@ -240,7 +237,7 @@ namespace ProyectoStudent.DAO
             }
             else
             {
-                Console.WriteLine("❌ Usuario no encontrado o contraseña incorrecta.");
+                Console.WriteLine("Usuario no encontrado o contraseña incorrecta.");
                 return null;
             }
         }

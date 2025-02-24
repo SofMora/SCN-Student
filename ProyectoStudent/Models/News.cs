@@ -8,6 +8,6 @@
         public string TextNews { get; set; }
         public DateTime DateNews { get; set; }
         public byte[] Images { get; set; }
-        public string TypeNews { get; set; } // Tipo de noticia como string
+        public string TypeNews { get; set; } 
     }
 }

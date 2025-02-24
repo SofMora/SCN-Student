@@ -10,7 +10,7 @@ namespace ProyectoStudent.Controllers
 
         public ProfessorController(IConfiguration configuration)
         {
-            _professorDao = new ProfessorDao(configuration); // Instanciamos el DAO
+            _professorDao = new ProfessorDao(configuration); 
         }
 
         

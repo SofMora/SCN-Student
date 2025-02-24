@@ -18,7 +18,6 @@ namespace ProyectoStudent.DAO
             _connectionString = _configuration.GetConnectionString("AdminConnection");
         }
 
-        // Method to insert a comment using stored procedure
         public async Task InsertCommentAsync(Comment comment)
         {
             var errorMessage = string.Empty;
@@ -44,7 +43,6 @@ namespace ProyectoStudent.DAO
 
                     await command.ExecuteNonQueryAsync();
 
-                    // Check for errors
                     errorMessage = errorParameter.Value.ToString();
                     if (!string.IsNullOrEmpty(errorMessage))
                     {
@@ -54,7 +52,6 @@ namespace ProyectoStudent.DAO
             }
         }
 
-        // Method to get comments by news ID using stored procedure
         public async Task<List<Comment>> GetCommentsByNewsIdAsync(int newsId)
         {
             var comments = new List<Comment>();
