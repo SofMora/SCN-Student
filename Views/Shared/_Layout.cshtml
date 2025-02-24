@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 
@@ -86,11 +86,12 @@
 
     <!-- PROFILE PICTURE -->
 
-    <section id="profile" class="entry-form2">
-        <img id="profile-pic" src="/images/pp.jpg" alt="Profile Picture">
-        <h2 id="profile-name">Claudia Ulloa</h2>
+    <div class="profile-container" style="display: none; text-align: center;">
+        <img id="profile-pic" src="/images/default-user.png" alt="Profile Picture" style="width: 100px; height: 100px; border-radius: 50%;">
+        <h2 id="profile-name">Nombre del Usuario</h2>
         <button onclick="openModal1()">Edit</button>
-    </section>
+    </div>
+
 
     <!-- Modal -->
     <div id="edit-modal" class="fixed inset-0 bg-gray-900 bg-opacity-50 flex items-center justify-center hidden">
@@ -190,7 +191,8 @@
         </div>
     </div>
 
-    <!-- Modal de Perfil
+    <!-- Modal de Perfil --
+
     <div id="perfil-modal" class="modal1">
         <div class="modal-content">
             <span class="close1" onclick="closeModal('perfil-modal')">&times;</span>
@@ -367,7 +369,7 @@
                     <br />
                     <input type="text" id="userName" placeholder="Usuario" required maxlength="50">
                     <br />
-                    <input type="password" id="password" placeholder="Contraseña" required maxlength="50">
+                    <input type="password" id="passwordRegister" placeholder="Contraseña" required maxlength="50">
                     <br />
                     <button type="submit" id="registerButton">Registrarse</button>
                 </form>
