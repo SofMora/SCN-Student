@@ -3,8 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\claud\\OneDrive\\Escritorio\\Lenguajes Aplicaciones Comerciales\\SCN-Student\\ProyectoStudent\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{079B3E0A-3B52-47C4-9287-0F93EBF6BDC6}|ProyectoStudent.csproj|c:\\users\\claud\\onedrive\\escritorio\\lenguajes aplicaciones comerciales\\scn-student\\proyectostudent\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{079B3E0A-3B52-47C4-9287-0F93EBF6BDC6}|ProyectoStudent.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{079B3E0A-3B52-47C4-9287-0F93EBF6BDC6}|ProyectoStudent.csproj|c:\\users\\claud\\onedrive\\escritorio\\lenguajes aplicaciones comerciales\\scn-student\\proyectostudent\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{079B3E0A-3B52-47C4-9287-0F93EBF6BDC6}|ProyectoStudent.csproj|solutionrelative:wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{079B3E0A-3B52-47C4-9287-0F93EBF6BDC6}|ProyectoStudent.csproj|c:\\users\\claud\\onedrive\\escritorio\\lenguajes aplicaciones comerciales\\scn-student\\proyectostudent\\models\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{079B3E0A-3B52-47C4-9287-0F93EBF6BDC6}|ProyectoStudent.csproj|solutionrelative:models\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{079B3E0A-3B52-47C4-9287-0F93EBF6BDC6}|ProyectoStudent.csproj|c:\\users\\claud\\onedrive\\escritorio\\lenguajes aplicaciones comerciales\\scn-student\\proyectostudent\\dao\\consultdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -13,10 +21,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{079B3E0A-3B52-47C4-9287-0F93EBF6BDC6}|ProyectoStudent.csproj|c:\\users\\claud\\onedrive\\escritorio\\lenguajes aplicaciones comerciales\\scn-student\\proyectostudent\\controllers\\consultcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{079B3E0A-3B52-47C4-9287-0F93EBF6BDC6}|ProyectoStudent.csproj|solutionrelative:controllers\\consultcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{079B3E0A-3B52-47C4-9287-0F93EBF6BDC6}|ProyectoStudent.csproj|c:\\users\\claud\\onedrive\\escritorio\\lenguajes aplicaciones comerciales\\scn-student\\proyectostudent\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{079B3E0A-3B52-47C4-9287-0F93EBF6BDC6}|ProyectoStudent.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{079B3E0A-3B52-47C4-9287-0F93EBF6BDC6}|ProyectoStudent.csproj|c:\\users\\claud\\onedrive\\escritorio\\lenguajes aplicaciones comerciales\\scn-student\\proyectostudent\\wwwroot\\css\\templatemo-style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
@@ -57,10 +61,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{079B3E0A-3B52-47C4-9287-0F93EBF6BDC6}|ProyectoStudent.csproj|c:\\users\\claud\\onedrive\\escritorio\\lenguajes aplicaciones comerciales\\scn-student\\proyectostudent\\models\\professor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{079B3E0A-3B52-47C4-9287-0F93EBF6BDC6}|ProyectoStudent.csproj|solutionrelative:models\\professor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{079B3E0A-3B52-47C4-9287-0F93EBF6BDC6}|ProyectoStudent.csproj|c:\\users\\claud\\onedrive\\escritorio\\lenguajes aplicaciones comerciales\\scn-student\\proyectostudent\\models\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{079B3E0A-3B52-47C4-9287-0F93EBF6BDC6}|ProyectoStudent.csproj|solutionrelative:models\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{079B3E0A-3B52-47C4-9287-0F93EBF6BDC6}|ProyectoStudent.csproj|c:\\users\\claud\\onedrive\\escritorio\\lenguajes aplicaciones comerciales\\scn-student\\proyectostudent\\dao\\studentdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -126,8 +126,36 @@
       "DocumentGroups": [
         {
           "DockedWidth": 254,
-          "SelectedChildIndex": 20,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\claud\\OneDrive\\Escritorio\\Lenguajes Aplicaciones Comerciales\\SCN-Student\\ProyectoStudent\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\claud\\OneDrive\\Escritorio\\Lenguajes Aplicaciones Comerciales\\SCN-Student\\ProyectoStudent\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAF8AAAAAAAAAAAAYwIAAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-22T05:31:09.701Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "site.js",
+              "DocumentMoniker": "C:\\Users\\claud\\OneDrive\\Escritorio\\Lenguajes Aplicaciones Comerciales\\SCN-Student\\ProyectoStudent\\wwwroot\\js\\site.js",
+              "RelativeDocumentMoniker": "wwwroot\\js\\site.js",
+              "ToolTip": "C:\\Users\\claud\\OneDrive\\Escritorio\\Lenguajes Aplicaciones Comerciales\\SCN-Student\\ProyectoStudent\\wwwroot\\js\\site.js",
+              "RelativeToolTip": "wwwroot\\js\\site.js",
+              "ViewState": "AgIAAL0BAAAAAAAAAAAYwMwBAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-02-22T05:33:35.121Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
@@ -206,35 +234,72 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CommentConsultController.cs",
+              "DocumentMoniker": "C:\\Users\\claud\\OneDrive\\Escritorio\\Lenguajes Aplicaciones Comerciales\\SCN-Student\\ProyectoStudent\\Controllers\\CommentConsultController.cs",
+              "RelativeDocumentMoniker": "Controllers\\CommentConsultController.cs",
+              "ToolTip": "C:\\Users\\claud\\OneDrive\\Escritorio\\Lenguajes Aplicaciones Comerciales\\SCN-Student\\ProyectoStudent\\Controllers\\CommentConsultController.cs",
+              "RelativeToolTip": "Controllers\\CommentConsultController.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAgwBwAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-24T04:54:20.005Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ConsultController.cs",
+              "DocumentMoniker": "C:\\Users\\claud\\OneDrive\\Escritorio\\Lenguajes Aplicaciones Comerciales\\SCN-Student\\ProyectoStudent\\Controllers\\ConsultController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ConsultController.cs",
+              "ToolTip": "C:\\Users\\claud\\OneDrive\\Escritorio\\Lenguajes Aplicaciones Comerciales\\SCN-Student\\ProyectoStudent\\Controllers\\ConsultController.cs",
+              "RelativeToolTip": "Controllers\\ConsultController.cs",
+              "ViewState": "AgIAAEAAAAAAAAAAAAAvwCYAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-24T04:53:08.453Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "CommentConsult.cs",
+              "DocumentMoniker": "C:\\Users\\claud\\OneDrive\\Escritorio\\Lenguajes Aplicaciones Comerciales\\SCN-Student\\ProyectoStudent\\Models\\CommentConsult.cs",
+              "RelativeDocumentMoniker": "Models\\CommentConsult.cs",
+              "ToolTip": "C:\\Users\\claud\\OneDrive\\Escritorio\\Lenguajes Aplicaciones Comerciales\\SCN-Student\\ProyectoStudent\\Models\\CommentConsult.cs",
+              "RelativeToolTip": "Models\\CommentConsult.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-24T04:18:12.411Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "CommentDao.cs",
+              "DocumentMoniker": "C:\\Users\\claud\\OneDrive\\Escritorio\\Lenguajes Aplicaciones Comerciales\\SCN-Student\\ProyectoStudent\\DAO\\CommentDao.cs",
+              "RelativeDocumentMoniker": "DAO\\CommentDao.cs",
+              "ToolTip": "C:\\Users\\claud\\OneDrive\\Escritorio\\Lenguajes Aplicaciones Comerciales\\SCN-Student\\ProyectoStudent\\DAO\\CommentDao.cs",
+              "RelativeToolTip": "DAO\\CommentDao.cs",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAIwGgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-24T00:45:54.93Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Student.cs",
+              "DocumentMoniker": "C:\\Users\\claud\\OneDrive\\Escritorio\\Lenguajes Aplicaciones Comerciales\\SCN-Student\\ProyectoStudent\\Models\\Student.cs",
+              "RelativeDocumentMoniker": "Models\\Student.cs",
+              "ToolTip": "C:\\Users\\claud\\OneDrive\\Escritorio\\Lenguajes Aplicaciones Comerciales\\SCN-Student\\ProyectoStudent\\Models\\Student.cs",
+              "RelativeToolTip": "Models\\Student.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAADwvyQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-22T09:06:18.363Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\claud\\OneDrive\\Escritorio\\Lenguajes Aplicaciones Comerciales\\SCN-Student\\ProyectoStudent\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\claud\\OneDrive\\Escritorio\\Lenguajes Aplicaciones Comerciales\\SCN-Student\\ProyectoStudent\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAMsAAAAAAAAAAAAswAsBAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-22T05:31:09.701Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "site.js",
-              "DocumentMoniker": "C:\\Users\\claud\\OneDrive\\Escritorio\\Lenguajes Aplicaciones Comerciales\\SCN-Student\\ProyectoStudent\\wwwroot\\js\\site.js",
-              "RelativeDocumentMoniker": "wwwroot\\js\\site.js",
-              "ToolTip": "C:\\Users\\claud\\OneDrive\\Escritorio\\Lenguajes Aplicaciones Comerciales\\SCN-Student\\ProyectoStudent\\wwwroot\\js\\site.js*",
-              "RelativeToolTip": "wwwroot\\js\\site.js*",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAswDsAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-02-22T05:33:35.121Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "ConsultDao.cs",
               "DocumentMoniker": "C:\\Users\\claud\\OneDrive\\Escritorio\\Lenguajes Aplicaciones Comerciales\\SCN-Student\\ProyectoStudent\\DAO\\ConsultDao.cs",
               "RelativeDocumentMoniker": "DAO\\ConsultDao.cs",
@@ -248,58 +313,6 @@
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "CommentConsultController.cs",
-              "DocumentMoniker": "C:\\Users\\claud\\OneDrive\\Escritorio\\Lenguajes Aplicaciones Comerciales\\SCN-Student\\ProyectoStudent\\Controllers\\CommentConsultController.cs",
-              "RelativeDocumentMoniker": "Controllers\\CommentConsultController.cs",
-              "ToolTip": "C:\\Users\\claud\\OneDrive\\Escritorio\\Lenguajes Aplicaciones Comerciales\\SCN-Student\\ProyectoStudent\\Controllers\\CommentConsultController.cs",
-              "RelativeToolTip": "Controllers\\CommentConsultController.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAgwBwAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-24T04:54:20.005Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ConsultController.cs",
-              "DocumentMoniker": "C:\\Users\\claud\\OneDrive\\Escritorio\\Lenguajes Aplicaciones Comerciales\\SCN-Student\\ProyectoStudent\\Controllers\\ConsultController.cs",
-              "RelativeDocumentMoniker": "Controllers\\ConsultController.cs",
-              "ToolTip": "C:\\Users\\claud\\OneDrive\\Escritorio\\Lenguajes Aplicaciones Comerciales\\SCN-Student\\ProyectoStudent\\Controllers\\ConsultController.cs",
-              "RelativeToolTip": "Controllers\\ConsultController.cs",
-              "ViewState": "AgIAAEAAAAAAAAAAAAAvwCYAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-24T04:53:08.453Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "CommentConsult.cs",
-              "DocumentMoniker": "C:\\Users\\claud\\OneDrive\\Escritorio\\Lenguajes Aplicaciones Comerciales\\SCN-Student\\ProyectoStudent\\Models\\CommentConsult.cs",
-              "RelativeDocumentMoniker": "Models\\CommentConsult.cs",
-              "ToolTip": "C:\\Users\\claud\\OneDrive\\Escritorio\\Lenguajes Aplicaciones Comerciales\\SCN-Student\\ProyectoStudent\\Models\\CommentConsult.cs",
-              "RelativeToolTip": "Models\\CommentConsult.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-24T04:18:12.411Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "CommentDao.cs",
-              "DocumentMoniker": "C:\\Users\\claud\\OneDrive\\Escritorio\\Lenguajes Aplicaciones Comerciales\\SCN-Student\\ProyectoStudent\\DAO\\CommentDao.cs",
-              "RelativeDocumentMoniker": "DAO\\CommentDao.cs",
-              "ToolTip": "C:\\Users\\claud\\OneDrive\\Escritorio\\Lenguajes Aplicaciones Comerciales\\SCN-Student\\ProyectoStudent\\DAO\\CommentDao.cs",
-              "RelativeToolTip": "DAO\\CommentDao.cs",
-              "ViewState": "AgIAAEsAAAAAAAAAAAAIwGgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-24T00:45:54.93Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
               "Title": "templatemo-style.css",
               "DocumentMoniker": "C:\\Users\\claud\\OneDrive\\Escritorio\\Lenguajes Aplicaciones Comerciales\\SCN-Student\\ProyectoStudent\\wwwroot\\css\\templatemo-style.css",
               "RelativeDocumentMoniker": "wwwroot\\css\\templatemo-style.css",
@@ -312,7 +325,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\claud\\OneDrive\\Escritorio\\Lenguajes Aplicaciones Comerciales\\SCN-Student\\ProyectoStudent\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -325,7 +338,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "CommentConsultDAO.cs",
               "DocumentMoniker": "C:\\Users\\claud\\OneDrive\\Escritorio\\Lenguajes Aplicaciones Comerciales\\SCN-Student\\ProyectoStudent\\DAO\\CommentConsultDAO.cs",
               "RelativeDocumentMoniker": "DAO\\CommentConsultDAO.cs",
@@ -338,7 +351,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "Error.cshtml",
               "DocumentMoniker": "C:\\Users\\claud\\OneDrive\\Escritorio\\Lenguajes Aplicaciones Comerciales\\SCN-Student\\ProyectoStudent\\Views\\Shared\\Error.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\Error.cshtml",
@@ -351,7 +364,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\claud\\OneDrive\\Escritorio\\Lenguajes Aplicaciones Comerciales\\SCN-Student\\ProyectoStudent\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
@@ -400,7 +413,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "Professor.cs",
               "DocumentMoniker": "C:\\Users\\claud\\OneDrive\\Escritorio\\Lenguajes Aplicaciones Comerciales\\SCN-Student\\ProyectoStudent\\Models\\Professor.cs",
               "RelativeDocumentMoniker": "Models\\Professor.cs",
@@ -413,7 +426,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "ProfessorDao.cs",
               "DocumentMoniker": "C:\\Users\\claud\\OneDrive\\Escritorio\\Lenguajes Aplicaciones Comerciales\\SCN-Student\\ProyectoStudent\\DAO\\ProfessorDao.cs",
               "RelativeDocumentMoniker": "DAO\\ProfessorDao.cs",
@@ -435,18 +448,6 @@
               "ViewState": "AgIAANwAAAAAAAAAAAAIwPkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-22T08:58:57.659Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "Student.cs",
-              "DocumentMoniker": "C:\\Users\\claud\\OneDrive\\Escritorio\\Lenguajes Aplicaciones Comerciales\\SCN-Student\\ProyectoStudent\\Models\\Student.cs",
-              "RelativeDocumentMoniker": "Models\\Student.cs",
-              "ToolTip": "C:\\Users\\claud\\OneDrive\\Escritorio\\Lenguajes Aplicaciones Comerciales\\SCN-Student\\ProyectoStudent\\Models\\Student.cs",
-              "RelativeToolTip": "Models\\Student.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-22T09:06:18.363Z"
             },
             {
               "$type": "Document",

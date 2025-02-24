@@ -78,25 +78,55 @@
         <div class="bg-white p-6 rounded-lg shadow-lg w-80">
             <h3 class="text-lg font-semibold mb-4">Edit Profile</h3>
 
-            <!-- New Name -->
+            <!-- Student ID (Hidden) -->
+            <input id="student-id" type="hidden">
+
+            <!-- Name -->
             <input id="new-name" type="text" placeholder="Enter new name" class="w-full p-2 border rounded mb-3">
 
-            <!-- New Profile URL -->
+            <!-- Last Name -->
+            <input id="new-lastname" type="text" placeholder="Enter last name" class="w-full p-2 border rounded mb-3">
+
+            <!-- Email -->
+            <input id="new-email" type="email" placeholder="Enter email" class="w-full p-2 border rounded mb-3">
+
+            <!-- Username -->
+            <input id="new-username" type="text" placeholder="Enter username" class="w-full p-2 border rounded mb-3">
+
+            <!-- Password -->
+            <input id="new-password" type="password" placeholder="Enter password" class="w-full p-2 border rounded mb-3">
+
+            <!-- Profile Photo (Upload) -->
+            <input id="new-photo" type="file" accept="image/*" class="w-full p-2 border rounded mb-3">
+
+            <!-- Profile URL -->
             <input id="profile-url" type="url" placeholder="Enter profile URL" class="w-full p-2 border rounded mb-3">
 
-            <!-- New Username -->
-            <input id="new-username" type="text" placeholder="Enter new username" class="w-full p-2 border rounded mb-3">
+            <!-- Social Links -->
+            <input id="new-social-links" type="text" placeholder="Enter social links" class="w-full p-2 border rounded mb-3">
 
+         
             <!-- Description -->
             <textarea id="new-description" placeholder="Enter description" class="w-full p-2 border rounded mb-3"></textarea>
 
+            <!-- Buttons -->
+            <div class="flex justify-between mt-4">
+                <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded">Save Changes</button>
 
-            <div class="flex justify-end space-x-2">
-                <button onclick="saveChanges1()" class="submit-btn1">Save</button>
-                <button onclick="closeModal1()" class="submit-btn1">Cancel</button>
+                <button type="button" class="bg-gray-400 text-white px-4 py-2 rounded" onclick="closeModal1()">Cancel</button>
             </div>
         </div>
     </div>
+
+    <script>
+        function closeModal() {
+            document.getElementById('edit-modal').classList.add('hidden');
+        }
+    </script>
+
+
+          
+      
 
     <script>
         // Función para abrir el modal
@@ -230,6 +260,7 @@
                     <button type="submit">Enviar Consulta</button>
                 </form>
             </div>
+
             <!-- Mostrar consultas -->
             <div id="consultations" class="consultations-list">
                 <!-- Consulta 1 -->
@@ -237,8 +268,13 @@
                     <h4>Consulta 1</h4>
                     <p>Descripción de la consulta...</p>
 
-                    <!-- Botón para ver los comentarios de la consulta -->
-                    <button class="view-comments btn btn-primary" data-consult-id="1">Ver Comentarios</button>
+                    <!-- Comentarios de la consulta -->
+                    <div class="comment-item">
+                        <p>Comentario predeterminado: Este es un comentario de prueba.</p>
+                        <span class="comment-date">Fecha: 2025-02-23</span>
+                    </div>
+
+                    <button class="btn btn-primary" data-consult-id="1" id="openCommentsModalButton">Ver Comentarios</button>
                 </div>
 
                 <!-- Consulta 2 -->
@@ -246,13 +282,18 @@
                     <h4>Consulta 2</h4>
                     <p>Descripción de otra consulta...</p>
 
-                    <!-- Botón para ver los comentarios de la consulta -->
-                    <button class="view-comments btn btn-primary" data-consult-id="2">Ver Comentarios</button>
+                    <!-- Comentarios de la consulta -->
+                    <div class="comment-item">
+                        <p>Comentario predeterminado: Este es otro comentario de prueba.</p>
+                        <span class="comment-date">Fecha: 2025-02-22</span>
+                    </div>
+
+                    <button class="btn btn-primary" data-consult-id="2" id="openCommentsModalButton">Ver Comentarios</button>
                 </div>
             </div>
 
             <!-- Modal para los comentarios -->
-            <div id="commentsModal" class="modal" style="display: none;">
+            <div id="commentsModalQA" class="modal" style="display: none;">
                 <div class="modal-content">
                     <span class="close-btn">&times;</span>
                     <h3>Comentarios</h3>
@@ -260,7 +301,7 @@
                         <!-- Los comentarios de la consulta se cargarán aquí -->
                     </div>
                     <!-- Campo para agregar comentarios -->
-                    <textarea id="newComment" placeholder="Escribe tu comentario aquí..." rows="3"></textarea>
+                    <textarea id="newCommentQA" placeholder="Escribe tu comentario aquí..." rows="3"></textarea>
                     </br>
                     <button id="submitComment">Agregar comentario</button>
                 </div>
