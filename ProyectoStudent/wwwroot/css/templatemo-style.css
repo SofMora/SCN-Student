@@ -1469,14 +1469,18 @@ th {
     background-color: rgba(0, 0, 0, 0.4); /* Fondo oscuro */
 }
 
-/* Estilo del contenido del modal */
 .modal-content {
-    background-color: white;
-    margin: 15% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
+    max-height: 80vh; /* Ajusta según necesidad */
+    overflow-y: auto;
 }
+
+#commentsList {
+    max-height: 300px; /* Ajusta la altura según necesidad */
+    overflow-y: auto;
+    border: 1px solid #ccc; /* Opcional: solo para visualizar el área */
+    padding: 10px;
+}
+
 
 /* Botón de cierre */
 .close-btn {

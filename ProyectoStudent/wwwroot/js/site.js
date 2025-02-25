@@ -288,13 +288,6 @@ $(document).ready(function () {
 
                 $("#commentsList").html(commentsContent);
                 $("#submitComment").data("news-id", newsId); // Store newsId for later use
-            },
-            error: function () {
-                Swal.fire({
-                    icon: "error",
-                    title: "Error",
-                    text: "No se pudieron cargar los comentarios.",
-                });
             }
         });
     }
@@ -391,14 +384,9 @@ $(document).ready(function () {
                 // Insert the comments into the modal
                 $("#commentsList").html(commentsContent);
                 $("#submitComment").data("consult-id", consultId);  // Store consultId for later use
-            },
-            error: function () {
-                Swal.fire({
-                    icon: "error",
-                    title: "Error",
-                    text: "No se pudieron cargar los comentarios.",
-                });
             }
+
+
         });
     }
 

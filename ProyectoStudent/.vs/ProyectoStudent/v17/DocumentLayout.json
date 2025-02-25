@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\claud\\OneDrive\\Escritorio\\Lenguajes Aplicaciones Comerciales\\SCN-Student\\ProyectoStudent\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{079B3E0A-3B52-47C4-9287-0F93EBF6BDC6}|ProyectoStudent.csproj|c:\\users\\claud\\onedrive\\escritorio\\lenguajes aplicaciones comerciales\\scn-student\\proyectostudent\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{079B3E0A-3B52-47C4-9287-0F93EBF6BDC6}|ProyectoStudent.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{079B3E0A-3B52-47C4-9287-0F93EBF6BDC6}|ProyectoStudent.csproj|c:\\users\\claud\\onedrive\\escritorio\\lenguajes aplicaciones comerciales\\scn-student\\proyectostudent\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{079B3E0A-3B52-47C4-9287-0F93EBF6BDC6}|ProyectoStudent.csproj|solutionrelative:wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{079B3E0A-3B52-47C4-9287-0F93EBF6BDC6}|ProyectoStudent.csproj|c:\\users\\claud\\onedrive\\escritorio\\lenguajes aplicaciones comerciales\\scn-student\\proyectostudent\\wwwroot\\css\\templatemo-style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{079B3E0A-3B52-47C4-9287-0F93EBF6BDC6}|ProyectoStudent.csproj|solutionrelative:wwwroot\\css\\templatemo-style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{079B3E0A-3B52-47C4-9287-0F93EBF6BDC6}|ProyectoStudent.csproj|c:\\users\\claud\\onedrive\\escritorio\\lenguajes aplicaciones comerciales\\scn-student\\proyectostudent\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{079B3E0A-3B52-47C4-9287-0F93EBF6BDC6}|ProyectoStudent.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{079B3E0A-3B52-47C4-9287-0F93EBF6BDC6}|ProyectoStudent.csproj|c:\\users\\claud\\onedrive\\escritorio\\lenguajes aplicaciones comerciales\\scn-student\\proyectostudent\\controllers\\consultcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -182,17 +182,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 254,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\Users\\claud\\OneDrive\\Escritorio\\Lenguajes Aplicaciones Comerciales\\SCN-Student\\ProyectoStudent\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
               "ToolTip": "C:\\Users\\claud\\OneDrive\\Escritorio\\Lenguajes Aplicaciones Comerciales\\SCN-Student\\ProyectoStudent\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAK4AAAAAAAAAAAAkwLkAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAE8BAAAAAAAAAAAAAF0BAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-02-22T05:31:09.701Z",
               "IsPinned": true,
@@ -200,13 +200,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "site.js",
               "DocumentMoniker": "C:\\Users\\claud\\OneDrive\\Escritorio\\Lenguajes Aplicaciones Comerciales\\SCN-Student\\ProyectoStudent\\wwwroot\\js\\site.js",
               "RelativeDocumentMoniker": "wwwroot\\js\\site.js",
-              "ToolTip": "C:\\Users\\claud\\OneDrive\\Escritorio\\Lenguajes Aplicaciones Comerciales\\SCN-Student\\ProyectoStudent\\wwwroot\\js\\site.js",
-              "RelativeToolTip": "wwwroot\\js\\site.js",
-              "ViewState": "AgIAAB8AAAAAAAAAAAAjwC0AAABcAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\claud\\OneDrive\\Escritorio\\Lenguajes Aplicaciones Comerciales\\SCN-Student\\ProyectoStudent\\wwwroot\\js\\site.js*",
+              "RelativeToolTip": "wwwroot\\js\\site.js*",
+              "ViewState": "AgIAAAcAAAAAAAAAAAArwB8AAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
               "WhenOpened": "2025-02-22T05:33:35.121Z",
               "IsPinned": true,
@@ -290,19 +290,6 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Appointment.cs",
-              "DocumentMoniker": "C:\\Users\\claud\\OneDrive\\Escritorio\\Lenguajes Aplicaciones Comerciales\\SCN-Student\\ProyectoStudent\\Models\\Appointment.cs",
-              "RelativeDocumentMoniker": "Models\\Appointment.cs",
-              "ToolTip": "C:\\Users\\claud\\OneDrive\\Escritorio\\Lenguajes Aplicaciones Comerciales\\SCN-Student\\ProyectoStudent\\Models\\Appointment.cs",
-              "RelativeToolTip": "Models\\Appointment.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-24T15:02:17.283Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 8,
               "Title": "HomeController.cs",
               "DocumentMoniker": "C:\\Users\\claud\\OneDrive\\Escritorio\\Lenguajes Aplicaciones Comerciales\\SCN-Student\\ProyectoStudent\\Controllers\\HomeController.cs",
@@ -311,8 +298,7 @@
               "RelativeToolTip": "Controllers\\HomeController.cs",
               "ViewState": "AgIAAA0AAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-24T06:24:46.296Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-24T06:24:46.296Z"
             },
             {
               "$type": "Document",
@@ -337,21 +323,32 @@
               "RelativeToolTip": "Controllers\\AppointmentController.cs",
               "ViewState": "AgIAABcAAAAAAAAAAAA9wD0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-24T15:08:06.93Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-24T15:08:06.93Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "templatemo-style.css",
               "DocumentMoniker": "C:\\Users\\claud\\OneDrive\\Escritorio\\Lenguajes Aplicaciones Comerciales\\SCN-Student\\ProyectoStudent\\wwwroot\\css\\templatemo-style.css",
               "RelativeDocumentMoniker": "wwwroot\\css\\templatemo-style.css",
               "ToolTip": "C:\\Users\\claud\\OneDrive\\Escritorio\\Lenguajes Aplicaciones Comerciales\\SCN-Student\\ProyectoStudent\\wwwroot\\css\\templatemo-style.css",
               "RelativeToolTip": "wwwroot\\css\\templatemo-style.css",
-              "ViewState": "AgIAAA4BAAAAAAAAAAAMwCUBAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAIAGAAAAAAAAAAAMwJQGAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2025-02-24T02:22:10.994Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Appointment.cs",
+              "DocumentMoniker": "C:\\Users\\claud\\OneDrive\\Escritorio\\Lenguajes Aplicaciones Comerciales\\SCN-Student\\ProyectoStudent\\Models\\Appointment.cs",
+              "RelativeDocumentMoniker": "Models\\Appointment.cs",
+              "ToolTip": "C:\\Users\\claud\\OneDrive\\Escritorio\\Lenguajes Aplicaciones Comerciales\\SCN-Student\\ProyectoStudent\\Models\\Appointment.cs",
+              "RelativeToolTip": "Models\\Appointment.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-24T15:02:17.283Z"
             },
             {
               "$type": "Document",
@@ -363,8 +360,7 @@
               "RelativeToolTip": "DAO\\AppointmentDAO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAKgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-24T15:05:25.565Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-24T15:05:25.565Z"
             },
             {
               "$type": "Document",
@@ -376,8 +372,7 @@
               "RelativeToolTip": "Controllers\\NewsController.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAABMAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-24T06:24:41.249Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-24T06:24:41.249Z"
             },
             {
               "$type": "Document",
