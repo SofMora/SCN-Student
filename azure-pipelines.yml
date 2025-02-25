@@ -1,0 +1,30 @@
+
+trigger:
+- main
+
+pool:
+  name: 'scn_pool'
+- task: DotNetCoreCLI@2
+  displayname: "Compilación"
+  inputs:
+    command: 'build'
+    projects: '**/*.csproj'
+    workingDirectory: '$(System.DefaultWorkingDirectory)/ProyectoStudent'
+
+- task: DotNetCoreCLI@2
+  displayname: "Publicación"
+- task: AzureRmWebAppDeployment@5
+  displayname: "Despliegue"
+  inputs:
+    ConnectionType: 'AzureRM'
+    azureSubscription: 'Azure subscription 1(59ef84d4-f523-4cee-9ef6-cce202b4bb53)'
+    appType: 'webApp'
+    WebAppName: 'SCNStudent'
+    packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
+  inputs:
+    command: 'publish'
+    publishWebProjects: true
+    workingDirectory: '$(System.DefaultWorkingDirectory)/ProyectoStudent'
+
+
+steps:
